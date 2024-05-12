@@ -1,0 +1,20 @@
+<div id="fondoPantalla" style="background-image: url('assets/images/cibertec.png'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px; width: 100%; height: 100vh; display: block;">
+    <br>
+    <br>
+    <form #formLogIn="ngForm" class="login-form">
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="cajamail" #cajamail placeholder="example@example.com" class="form-control" autocomplete="off">
+        </div>
+        <div class="form-group">
+            <label>Contraseña</label>
+            <input type="password" name="cajapassword" #cajapassword placeholder="123456" class="form-control" minlength="6" maxlength="20" pattern="[A-Za-z0-9]{6,20}" autocomplete="off">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-success" (click)="logIn()">Log In</button>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-danger" (click)="logInGoogle()">Log In con Google</button>
+        </div>
+    </form>
+</div>
